@@ -4,18 +4,7 @@ Keras implementation of Deeplabv3+
 DeepLab is a state-of-art deep learning model for semantic image segmentation.  
 
 Model is based on the original TF frozen graph. It is possible to load pretrained weights into this model. Weights are directly imported from original TF checkpoint.  
-
-Segmentation results of original TF model. __Output Stride = 8__
  
-
-Segmentation results of this repo model with loaded weights and __OS = 8__  
-Results are identical to the TF model  
- 
-
-Segmentation results of this repo model with loaded weights and __OS = 16__  
-Results are still good
- 
-
 ### How to get labels
 Model will return tensor of shape (batch_size,height,width,classes). To obtain labels, you need to apply argmax to logits at exit layer. Example of predicting on image1.jpg:  
 
