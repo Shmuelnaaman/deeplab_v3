@@ -6,27 +6,15 @@ DeepLab is a state-of-art deep learning model for semantic image segmentation.
 Model is based on the original TF frozen graph. It is possible to load pretrained weights into this model. Weights are directly imported from original TF checkpoint.  
 
 Segmentation results of original TF model. __Output Stride = 8__
-<p align="center">
-    <img src="imgs/seg_results1.png" width=600></br>
-    <img src="imgs/seg_results2.png" width=600></br>
-    <img src="imgs/seg_results3.png" width=600></br>
-</p>
+ 
 
 Segmentation results of this repo model with loaded weights and __OS = 8__  
 Results are identical to the TF model  
-<p align="center">
-    <img src="imgs/my_seg_results1_OS8.png" width=600></br>
-    <img src="imgs/my_seg_results2_OS8.png" width=600></br>
-    <img src="imgs/my_seg_results3_OS8.png" width=600></br>
-</p>
+ 
 
 Segmentation results of this repo model with loaded weights and __OS = 16__  
 Results are still good
-<p align="center">
-    <img src="imgs/my_seg_results1_OS16.png" width=600></br>
-    <img src="imgs/my_seg_results2_OS16.png" width=600></br>
-    <img src="imgs/my_seg_results3_OS16.png" width=600></br>
-</p>
+ 
 
 ### How to get labels
 Model will return tensor of shape (batch_size,height,width,classes). To obtain labels, you need to apply argmax to logits at exit layer. Example of predicting on image1.jpg:  
